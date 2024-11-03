@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - Homebase Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #FFD700;
+        }
+        .application-form {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin: 40px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .confirmation-button {
+            background: #007BFF;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .confirmation-button:hover {
+            background: #0056b3;
+        }
+        .confirmation-note {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 0.9em;
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Join Our Team at Homebase Hub</h1>
+        <p>We're looking for talented individuals to help us deliver exceptional services.</p>
+    </header>
+    <main>
+        <section class="application-form">
+            <h2>Job Application Form</h2>
+            <p class="confirmation-note">After submitting the form, look below and click the "Get Application Confirmation" button. Note: you can only click the button after submitting your form.</p>
+            <form action="/submit-application" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="position">Position Applied For:</label>
+                    <select id="position" name="position" required>
+                        <option value="">Select a position</option>
+                        <option value="data-entry">Data Entry Specialist</option>
+                        <option value="customer-service">Customer Service Representative</option>
+                        <option value="both">Both</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resume">Upload Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+                </div>
+                <div class="form-group">
+                    <label for="cover-letter">Cover Letter:</label>
+                    <textarea id="cover-letter" name="cover-letter" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit Application</button>
+            </form>
+            <a href="confirmation.html" class="confirmation-button">Get Application Confirmation</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Homebase Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
